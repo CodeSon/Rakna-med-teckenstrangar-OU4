@@ -6,39 +6,49 @@ public class OperationerMedNaturligaHeltalGivnaSomTeckenstrangar {
 
 	public static void main(String[] args) {
 
-
 		out.println ("OPERATIONER MED NATURLIGA HELTAL GIVNA SOM TECKENSTRANGAR\n");
-		 // mata in två naturliga heltal
+		
+		// mata in två naturliga heltal
 		 Scanner in = new Scanner (System.in);
 		 out.println ("två naturliga heltal:");
 		 String tal1 = in.next ();
 		 String tal2 = in.next ();
 		 out.println ();
+		
 		 // addera heltalen och visa resultatet
 		 String summa = addera (tal1, tal2);
 		 visa (tal1, tal2, summa, '+');
+		
 		 // subtrahera heltalen och visa resultatet
-		 // koden här
+		 String diferens = subtrahera (tal1, tal2);
+		 visa (tal1, tal2, diferens, '-');
 		 }
-		 // addera tar emot två naturliga heltal givna som teckensträngar, och returnerar deras
+		 
+	
+	// addera tar emot två naturliga heltal givna som teckensträngar, och returnerar deras
 		 // summa som en teckensträng.
-		 public static String addera (String tal1, String tal2)
-		 {
-		 // koden ska skrivas här
+		 public static String addera (String tal1, String tal2){
 			 
+			 Tal talett = new Tal (tal1);
+			 Tal taltva = new Tal (tal2);
+			 Tal summa = talett.add(taltva);
+			  return summa.toString();
 			 
-			 return "";
-			 
-			
 		 }
 		 // subtrahera tar emot två naturliga heltal givna som teckensträngar, och returnerar
 		 // deras differens som en teckensträng.
 		 // Det första heltalet är inte mindre än det andra heltalet.
 		 public static String subtrahera (String tal1, String tal2)
 		 {
-		 // koden ska skrivas här
 			 
-			 return"";
+			 Tal talett = new Tal (tal1);
+			 Tal taltva = new Tal (tal2);
+			 Tal differens = talett.differens(taltva);
+			  return differens.toString();
+			 
+			 
+			 
+			// return"";
 		 }
 		// visa visar två givna naturliga heltal, och resultatet av en aritmetisk operation
 		 // utförd i samband med hetalen
