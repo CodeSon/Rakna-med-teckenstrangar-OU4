@@ -6,8 +6,10 @@ public class OperationerMedNaturligaHeltalGivnaSomTeckenstrangar {
 
 	public static void main(String[] args) {
 
-		out.println ("OPERATIONER MED NATURLIGA HELTAL GIVNA SOM TECKENSTRANGAR\n");
-		
+		out.println ("OPERATIONER MED NATURLIGA HELTAL GIVNA SOM TECKENSTRANGAR");
+		 out.println("---------------------------------------------------------");
+		int	 []  svar =	new int[5];	
+		System.out.println(svar[0]);
 		// mata in två naturliga heltal
 		 Scanner in = new Scanner (System.in);
 		 out.println ("två naturliga heltal:");
@@ -18,14 +20,19 @@ public class OperationerMedNaturligaHeltalGivnaSomTeckenstrangar {
 		 // addera heltalen och visa resultatet
 		 String summa = addera (tal1, tal2);
 		 visa (tal1, tal2, summa, '+');
-		
-		 // subtrahera heltalen och visa resultatet
+		 
+		// subtrahera heltalen och visa resultatet
 		 String diferens = subtrahera (tal1, tal2);
 		 visa (tal1, tal2, diferens, '-');
 		 
 		 // multiplicera heltalen och visa resultatet
 		 String multi = multiplicera (tal1, tal2);
 		 visa (tal1, tal2, multi, '*');
+		 
+		 
+		 // dividera heltalen och visa resultatet
+		 String dela = dividera (tal1, tal2);
+		 visa (tal1, tal2, dela, '/');
 		 
 		 }
 		 
@@ -61,13 +68,17 @@ public class OperationerMedNaturligaHeltalGivnaSomTeckenstrangar {
 					 Tal multi = talett.multi(taltva);
 					  return multi.toString();
 				 }
+				// dividera tar emot två naturliga heltal givna som teckensträngar, och returnerar deras
+				 // summa som en teckensträng.
+				 public static String dividera (String tal1, String tal2){
+					 
+					 Tal talett = new Tal (tal1);
+					 Tal taltva = new Tal (tal2);
+					 Tal dela = talett.dela(taltva);
+					  return dela.toString();
+				 }
 		 
-		 
-		
-			
-
-
-		// visa visar två givna naturliga heltal, och resultatet av en aritmetisk operation
+		 // visa visar två givna naturliga heltal, och resultatet av en aritmetisk operation
 		 // utförd i samband med hetalen
 		public static void visa (String tal1, String tal2, String resultat, char operator)
 		 {

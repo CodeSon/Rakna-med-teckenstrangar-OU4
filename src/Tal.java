@@ -42,6 +42,15 @@ public class Tal {
 		return multi;
 
 	}
+	
+	public Tal dela(Tal tal2) 
+	{
+
+		Tal dela= new Tal(this.talInt / tal2.talInt);
+
+		return dela;
+
+	}
 
 	public String toString() {
 		return Integer.toString(this.talInt);
