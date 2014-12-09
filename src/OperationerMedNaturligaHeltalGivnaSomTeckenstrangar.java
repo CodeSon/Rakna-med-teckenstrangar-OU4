@@ -22,6 +22,11 @@ public class OperationerMedNaturligaHeltalGivnaSomTeckenstrangar {
 		 // subtrahera heltalen och visa resultatet
 		 String diferens = subtrahera (tal1, tal2);
 		 visa (tal1, tal2, diferens, '-');
+		 
+		 // multiplicera heltalen och visa resultatet
+		 String multi = multiplicera (tal1, tal2);
+		 visa (tal1, tal2, multi, '*');
+		 
 		 }
 		 
 	
@@ -46,10 +51,22 @@ public class OperationerMedNaturligaHeltalGivnaSomTeckenstrangar {
 			 Tal differens = talett.differens(taltva);
 			  return differens.toString();
 			 
-			 
-			 
-			// return"";
 		 }
+		// multiplicera tar emot två naturliga heltal givna som teckensträngar, och returnerar deras
+				 // summa som en teckensträng.
+				 public static String multiplicera (String tal1, String tal2){
+					 
+					 Tal talett = new Tal (tal1);
+					 Tal taltva = new Tal (tal2);
+					 Tal multi = talett.multi(taltva);
+					  return multi.toString();
+				 }
+		 
+		 
+		
+			
+
+
 		// visa visar två givna naturliga heltal, och resultatet av en aritmetisk operation
 		 // utförd i samband med hetalen
 		public static void visa (String tal1, String tal2, String resultat, char operator)

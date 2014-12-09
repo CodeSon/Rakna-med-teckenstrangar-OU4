@@ -32,6 +32,16 @@ public class Tal {
 		return differens;
 
 	}
+	
+	
+	public Tal multi(Tal tal2) 
+	{
+
+		Tal multi= new Tal(this.talInt * tal2.talInt);
+
+		return multi;
+
+	}
 
 	public String toString() {
 		return Integer.toString(this.talInt);
